@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,42 +118,42 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Author.Description" xml:space="preserve">
-    <value>Author</value>
+    <value>作者</value>
   </data>
   <data name="LicenseId" xml:space="preserve">
-    <value>License ID</value>
+    <value>许可证ID</value>
   </data>
   <data name="LicenseName" xml:space="preserve">
-    <value>License name</value>
+    <value>许可证名称</value>
   </data>
   <data name="New.Description" xml:space="preserve">
-    <value>Create a license</value>
+    <value>创建许可证</value>
   </data>
   <data name="NoOptional.Description" xml:space="preserve">
-    <value>Ignore the options in the template</value>
+    <value>忽略模板中的可选部分</value>
   </data>
   <data name="Output.Description" xml:space="preserve">
-    <value>Write the license here</value>
+    <value>将许可证写入到此处</value>
   </data>
   <data name="PrintWidth.Description" xml:space="preserve">
-    <value>Print width</value>
+    <value>打印宽度</value>
   </data>
   <data name="Quiet.Description" xml:space="preserve">
-    <value>Quiet mode, will not print output</value>
+    <value>安静模式，不会打印输出</value>
   </data>
   <data name="Root.Description" xml:space="preserve">
-    <value>License creates practical tools</value>
+    <value>许可证创建实用工具</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Search for license in spdx.org</value>
+    <value>在 spdx.org 中搜索许可证</value>
   </data>
   <data name="SPDXExpression.Description" xml:space="preserve">
-    <value>SPDX expression</value>
+    <value>SPDX 表达式</value>
   </data>
   <data name="SPDXLike.Description" xml:space="preserve">
-    <value>SPDX expression (fuzzy match)</value>
+    <value>SPDX 表达式（模糊匹配）</value>
   </data>
   <data name="Variables.Description" xml:space="preserve">
-    <value>Permit variable</value>
+    <value>许可证变量</value>
   </data>
 </root>

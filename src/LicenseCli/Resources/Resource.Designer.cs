@@ -19,7 +19,7 @@ namespace LicenseCli.Resources {
     // 类通过类似于 ResGen 或 Visual Studio 的工具自动生成的。
     // 若要添加或移除成员，请编辑 .ResX 文件，然后重新运行 ResGen
     // (以 /str 作为命令选项)，或重新生成 VS 项目。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resource {
@@ -61,7 +61,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 作者 的本地化字符串。
+        ///   查找类似 Author 的本地化字符串。
         /// </summary>
         internal static string Author_Description {
             get {
@@ -70,7 +70,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 许可证ID 的本地化字符串。
+        ///   查找类似 License ID 的本地化字符串。
         /// </summary>
         internal static string LicenseId {
             get {
@@ -79,7 +79,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 许可证名称 的本地化字符串。
+        ///   查找类似 License name 的本地化字符串。
         /// </summary>
         internal static string LicenseName {
             get {
@@ -88,7 +88,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 创建许可证 的本地化字符串。
+        ///   查找类似 Create a license 的本地化字符串。
         /// </summary>
         internal static string New_Description {
             get {
@@ -97,7 +97,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 忽略模板中的可选部分 的本地化字符串。
+        ///   查找类似 Ignore the options in the template 的本地化字符串。
         /// </summary>
         internal static string NoOptional_Description {
             get {
@@ -106,7 +106,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 将许可证写入到此处 的本地化字符串。
+        ///   查找类似 Write the license here 的本地化字符串。
         /// </summary>
         internal static string Output_Description {
             get {
@@ -115,7 +115,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 打印宽度 的本地化字符串。
+        ///   查找类似 Print width 的本地化字符串。
         /// </summary>
         internal static string PrintWidth_Description {
             get {
@@ -124,7 +124,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 安静模式，不会打印输出 的本地化字符串。
+        ///   查找类似 Quiet mode, will not print output 的本地化字符串。
         /// </summary>
         internal static string Quiet_Description {
             get {
@@ -133,7 +133,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 许可证创建实用工具 的本地化字符串。
+        ///   查找类似 License creates practical tools 的本地化字符串。
         /// </summary>
         internal static string Root_Description {
             get {
@@ -142,7 +142,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 在 spdx.org 中搜索许可证 的本地化字符串。
+        ///   查找类似 Search for license in spdx.org 的本地化字符串。
         /// </summary>
         internal static string Search_Description {
             get {
@@ -151,7 +151,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 SPDX 表达式 的本地化字符串。
+        ///   查找类似 SPDX expression 的本地化字符串。
         /// </summary>
         internal static string SPDXExpression_Description {
             get {
@@ -160,7 +160,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 SPDX 表达式（模糊匹配） 的本地化字符串。
+        ///   查找类似 SPDX expression (fuzzy match) 的本地化字符串。
         /// </summary>
         internal static string SPDXLike_Description {
             get {
@@ -169,7 +169,7 @@ namespace LicenseCli.Resources {
         }
         
         /// <summary>
-        ///   查找类似 许可证变量 的本地化字符串。
+        ///   查找类似 Permit variable 的本地化字符串。
         /// </summary>
         internal static string Variables_Description {
             get {
