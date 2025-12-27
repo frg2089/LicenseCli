@@ -3,6 +3,7 @@
 using LicenseCli.Models;
 
 namespace LicenseCli;
+
 internal sealed class SPDXClient(HttpClient client, bool leaveOpen = false) : IDisposable
 {
     private bool _disposedValue;
@@ -27,8 +28,8 @@ internal sealed class SPDXClient(HttpClient client, bool leaveOpen = false) : ID
     /// <returns></returns>
     private static string GetCacheFile(params string[] path)
     {
-        var cache = Path.Combine([AppContext.BaseDirectory, ".cache", .. path]);
-        var parent = Path.GetDirectoryName(cache);
+        string cache = Path.Combine([AppContext.BaseDirectory, ".cache", .. path]);
+        string? parent = Path.GetDirectoryName(cache);
         if (!Directory.Exists(parent) && !string.IsNullOrEmpty(parent))
             Directory.CreateDirectory(parent);
 
@@ -48,7 +49,7 @@ internal sealed class SPDXClient(HttpClient client, bool leaveOpen = false) : ID
             .ConfigureAwait(false);
 
         return await JsonSerializer
-            .DeserializeAsync<LicensesIndex>(fs)
+            .DeserializeAsync(fs, SPDXJsonSerializerContext.Default.LicensesIndex)
             .ConfigureAwait(false)
             ?? throw new InvalidDataException("Cannot deserialize index.");
     }
@@ -77,13 +78,13 @@ internal sealed class SPDXClient(HttpClient client, bool leaveOpen = false) : ID
             license.DetailsUrl)
             .ConfigureAwait(false);
 
-        return await JsonSerializer.DeserializeAsync<LicenseDetails>(fs)
+        return await JsonSerializer.DeserializeAsync(fs, SPDXJsonSerializerContext.Default.LicenseDetails)
             .ConfigureAwait(false);
     }
 
     private async Task<FileStream> GetStreamAsync(string path, string url)
     {
-        var etagPath = path + ".etag";
+        string etagPath = path + ".etag";
         if (File.Exists(path))
         {
             try

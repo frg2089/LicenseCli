@@ -1,29 +1,36 @@
-<Project>
+﻿<Project>
   <!-- See https://aka.ms/dotnet/msbuild/customize for more details on customizing your build -->
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
-
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+  <PropertyGroup>
     <PackAsTool>true</PackAsTool>
+    <Description>A powerful command-line tool for creating and managing open source licenses. It supports searching licenses from SPDX.org, generating license files with customizable variables, and handling multiple license formats. Features include license search, template-based generation, and support for common license types like MIT, GPL, Apache, etc.</Description>
     <ToolCommandName>dotnet-license</ToolCommandName>
     <SignAssembly>False</SignAssembly>
     <Authors>frg2089</Authors>
     <PackageProjectUrl>https://github.com/frg2089/LicenseCli</PackageProjectUrl>
     <RepositoryUrl>https://github.com/frg2089/LicenseCli.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>license-cli</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Copyright>Copyright © 2021-2025 $(Authors)</Copyright>
+    <Copyright>Copyright © 2021 - $([System.DateTime]::Now.ToString("yyyy")) $(Authors)</Copyright>
     <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IconPath Condition=" '$(IconPath)' == '' AND Exists('$(MSBuildProjectDirectory)\Assets\logo.png')">$(MSBuildProjectDirectory)\Assets\logo.png</IconPath>
+    <IconPath Condition=" '$(IconPath)' == '' AND Exists('$(MSBuildThisFileDirectory)\assets\logo.png')">$(MSBuildThisFileDirectory)\assets\logo.png</IconPath>
+    <PackageIcon Condition=" '$(IconPath)' != '' ">logo.png</PackageIcon>
+    <ReadmeFile Condition=" '$(ReadmeFile)' == '' AND Exists('$(MSBuildProjectDirectory)\ReadMe.md')">$(MSBuildProjectDirectory)\ReadMe.md</ReadmeFile>
+    <ReadmeFile Condition=" '$(ReadmeFile)' == '' AND Exists('$(MSBuildThisFileDirectory)\ReadMe.md')">$(MSBuildThisFileDirectory)\ReadMe.md</ReadmeFile>
+    <PackageReadmeFile Condition=" '$(ReadmeFile)' != '' ">ReadMe.md</PackageReadmeFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)ReadMe.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
 </Project>

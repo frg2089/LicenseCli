@@ -2,14 +2,16 @@
   <PropertyGroup>
     <!-- Enable central package management, https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <GitVersionTargetFramework>net10.0</GitVersionTargetFramework>
+    <UseProjectNamespaceForGitVersionInformation>true</UseProjectNamespaceForGitVersionInformation>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="ConsoleTables" Version="2.6.2" />
-    <PackageVersion Include="DotMake.CommandLine" Version="1.8.8" />
-    <PackageVersion Include="LikeComparison" Version="2.3.0" />
+    <PackageVersion Include="ConsoleTables" Version="2.7.0" />
+    <PackageVersion Include="DotMake.CommandLine" Version="3.1.0" />
+    <PackageVersion Include="LikeComparison" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="GitVersion.MsBuild" Version="6.1.0" />
+    <GlobalPackageReference Include="GitVersion.MsBuild" Version="6.5.1" />
   </ItemGroup>
 </Project>

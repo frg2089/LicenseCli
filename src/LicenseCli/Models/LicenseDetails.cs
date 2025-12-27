@@ -1,6 +1,7 @@
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace LicenseCli.Models;
+
 public sealed record CrossRef
 {
     [JsonPropertyName("match")]

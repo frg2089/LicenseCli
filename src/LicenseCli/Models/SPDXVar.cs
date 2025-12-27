@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 
 namespace LicenseCli.Models;
+
 internal sealed record class SPDXVar(string Name, string Original, Regex Match)
 {
     public static bool TryParse(string input, [NotNullWhen(true)] out SPDXVar? var)

@@ -47,7 +47,7 @@ internal sealed partial class NewCommand
             throw new InvalidDataException("Cannot found StandardLicenseTemplate");
 
         var slotRegex = SlotRegex();
-        var templates = slotRegex.Split(license.StandardLicenseTemplate);
+        string[] templates = slotRegex.Split(license.StandardLicenseTemplate);
         var slots = slotRegex.Matches(license.StandardLicenseTemplate);
 
         StringBuilder result = new(templates[0]);
@@ -55,14 +55,14 @@ internal sealed partial class NewCommand
         for (int i = 0; i < slots.Count; i++)
         {
             var slot = slots[i];
-            var value = slot.Value.TrimStart('<').TrimEnd('>');
+            string value = slot.Value.TrimStart('<').TrimEnd('>');
             if (value is "beginOptional")
                 inOptional = true;
             else if (value is "endOptional")
                 inOptional = false;
             else if (SPDXVar.TryParse(value, out var var))
             {
-                if (!Variables.TryGetValue(var.Name, out var varValue))
+                if (!Variables.TryGetValue(var.Name, out string? varValue))
                 {
                     varValue = var.Original;
                     if (var.Name is "copyright")
@@ -91,7 +91,7 @@ internal sealed partial class NewCommand
             // 或允许输出 <<beginOptional>> 和 <<endOptional>> 之间的内容
             if (!inOptional || !NoOptional)
             {
-                var template = templates[i + 1];
+                string template = templates[i + 1];
                 result.Append(template);
             }
         }
@@ -102,7 +102,7 @@ internal sealed partial class NewCommand
             result.Clear();
             while (sr.Peek() is not -1)
             {
-                var line = sr.ReadLine();
+                string? line = sr.ReadLine();
                 if (string.IsNullOrWhiteSpace(line) || line.Length < PrintWidth)
                 {
                     result.AppendLine(line ?? string.Empty);
@@ -118,7 +118,7 @@ internal sealed partial class NewCommand
                 line = line[indent..];
                 while (line.Length > 0)
                 {
-                    var p = PrintWidth;
+                    int p = PrintWidth;
                     p -= indent;
                     if (p >= line.Length)
                         break;

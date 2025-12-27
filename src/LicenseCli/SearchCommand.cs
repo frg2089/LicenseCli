@@ -1,7 +1,9 @@
-﻿using DotMake.CommandLine;
+﻿using ConsoleTables;
+
+using DotMake.CommandLine;
 
 using LicenseCli.Resources;
-using ConsoleTables;
+
 using LikeComparison.PostgreSql;
 
 namespace LicenseCli;

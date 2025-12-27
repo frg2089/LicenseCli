@@ -1,8 +1,7 @@
-using System.Collections;
-using System.ComponentModel;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace LicenseCli.Models;
+
 public sealed record LicenseDeclare
 {
     [JsonPropertyName("reference")]
