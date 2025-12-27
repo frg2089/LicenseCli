@@ -1,14 +1,49 @@
 # License Cli
 
-非常轻松的生成许可证文件而不必到处寻找文本。
-只需要使用`dotnet license new <SPDX>`。
+A command-line tool for generating license files, supporting multiple open-source license formats.
 
-It is very easy to generate license files without having to search for license text everywhere.
-Just use `dotnet license new <SPDX>`.
+## Features
 
-## 关于翻译/Translate
-请在[此处](https://github.com/frg2089/LicenseCli)贡献您的翻译。
-或者开启一个Issue，由我去生成机器翻译。
+- 🚀 Quickly generate standard license files
+- 📝 Support for custom author and copyright information
+- 🔍 Support for searching and finding licenses
+- 📦 Automatic license caching
 
-Please contribute [here](https://github.com/frg2089/LicenseCli).
-Or open an issue and I will generate a machine translation.
+## Installation
+
+```bash
+dotnet tool install --global LicenseCli
+```
+
+## Usage
+
+### Creating License Files
+
+```bash
+# Create MIT license
+dotnet license new MIT
+
+# Create license with author information
+dotnet license new MIT "Your Name"
+
+# Specify output path
+dotnet license new MIT -o /path/to/LICENSE
+
+# Quiet mode (no console output)
+dotnet license new MIT -q
+```
+
+### Searching Licenses
+
+```bash
+# Search for licenses
+dotnet license search gpl
+```
+
+## Contributing
+
+Issues and Pull Requests are welcome to help improve this project.
+
+## License
+
+This project is open-sourced under the MIT License.

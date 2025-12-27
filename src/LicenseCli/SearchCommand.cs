@@ -4,8 +4,6 @@ using DotMake.CommandLine;
 
 using LicenseCli.Resources;
 
-using LikeComparison.PostgreSql;
-
 namespace LicenseCli;
 
 [CliCommand(Aliases = ["find"], Description = nameof(Resource.Search_Description), Parent = typeof(RootCommand))]
@@ -20,11 +18,11 @@ internal sealed class SearchCommand
         var index = await client.GetLicenseIndexAsync().ConfigureAwait(false);
 
         ConsoleTable table = new(Resource.LicenseId, Resource.LicenseName);
-        foreach (var license in index.Licenses ?? [])
+        foreach (var license in index.Licenses
+            ?.Where(i => !string.IsNullOrWhiteSpace(i.LicenseId))
+            .Where(i => i.LicenseId.Contains(Like, StringComparison.OrdinalIgnoreCase))
+            ?? [])
         {
-            if (string.IsNullOrWhiteSpace(license.LicenseId)
-                || !Like.ILike(license.LicenseId))
-                continue;
             table.AddRow(license.LicenseId, license.Name);
         }
 

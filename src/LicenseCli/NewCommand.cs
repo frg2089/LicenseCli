@@ -17,10 +17,10 @@ internal sealed partial class NewCommand
     [CliArgument(Description = nameof(Resource.Author_Description), Required = false)]
     public string? Author { get; set; }
 
-    [CliOption(Description = nameof(Resource.Output_Description), Aliases = ["-o", "--out"], Required = false)]
+    [CliOption(Description = nameof(Resource.Output_Description), Aliases = ["o", "out"], Required = false)]
     public string Output { get; set; } = Path.Combine(Environment.CurrentDirectory, "LICENSE");
 
-    [CliOption(Description = nameof(Resource.Quiet_Description), Aliases = ["-q"], Required = false)]
+    [CliOption(Description = nameof(Resource.Quiet_Description), Aliases = ["q"], Required = false)]
     public bool Quiet { get; set; }
 
     [CliOption(Description = nameof(Resource.PrintWidth_Description), Required = false)]

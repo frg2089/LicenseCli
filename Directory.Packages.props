@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageVersion Include="ConsoleTables" Version="2.7.0" />
     <PackageVersion Include="DotMake.CommandLine" Version="3.1.0" />
-    <PackageVersion Include="LikeComparison" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
     <GlobalPackageReference Include="GitVersion.MsBuild" Version="6.5.1" />

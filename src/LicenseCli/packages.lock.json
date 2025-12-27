@@ -26,12 +26,6 @@
         "resolved": "6.5.1",
         "contentHash": "92zAmfGWVtjHM8eR7O+1WWxqP+gulXvVqu3Sb1+KzuImdmxBt/bln/dMRvsIyV69KEiSrtbUoet4HBjG+bOLyw=="
       },
-      "LikeComparison": {
-        "type": "Direct",
-        "requested": "[2.4.0, )",
-        "resolved": "2.4.0",
-        "contentHash": "+sCgy7QdNZeWqmELkUtyRMKwXDto2plapCSwgBp/ToHNGNirr3RB+RuMnYEuhuCAFnRGQCX+HaEaHK5IYeoB+A=="
-      },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
         "requested": "[10.0.1, )",
@@ -74,12 +68,6 @@
         "resolved": "6.5.1",
         "contentHash": "92zAmfGWVtjHM8eR7O+1WWxqP+gulXvVqu3Sb1+KzuImdmxBt/bln/dMRvsIyV69KEiSrtbUoet4HBjG+bOLyw=="
       },
-      "LikeComparison": {
-        "type": "Direct",
-        "requested": "[2.4.0, )",
-        "resolved": "2.4.0",
-        "contentHash": "+sCgy7QdNZeWqmELkUtyRMKwXDto2plapCSwgBp/ToHNGNirr3RB+RuMnYEuhuCAFnRGQCX+HaEaHK5IYeoB+A=="
-      },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
         "requested": "[8.0.22, )",
@@ -121,12 +109,6 @@
         "requested": "[6.5.1, )",
         "resolved": "6.5.1",
         "contentHash": "92zAmfGWVtjHM8eR7O+1WWxqP+gulXvVqu3Sb1+KzuImdmxBt/bln/dMRvsIyV69KEiSrtbUoet4HBjG+bOLyw=="
-      },
-      "LikeComparison": {
-        "type": "Direct",
-        "requested": "[2.4.0, )",
-        "resolved": "2.4.0",
-        "contentHash": "+sCgy7QdNZeWqmELkUtyRMKwXDto2plapCSwgBp/ToHNGNirr3RB+RuMnYEuhuCAFnRGQCX+HaEaHK5IYeoB+A=="
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
